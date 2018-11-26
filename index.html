@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Test</title>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="charCount.js"></script>    
     <script type="text/javascript">
-    $(function(){
-        $("#toggle").on("click",function(){
-            $("#toggle").fadeToggle("slow");
+        $(function(){
+            $("#toggle").on("click",function(){
+               $("#toggle").fadeToggle("slow");
+            });
         });
-    });
+        $(document).ready(function(){
+            $("#id名").charCount();
+        });
     </script>    
 </head>
 <body>
     <div id="target">表示・非表示される要素</div>
     <button id="toggle">切り替え</button>
 </body>
+<form id="form" method="post" action="">
+    <div>
+        <textarea id="id名" ></textarea>
+    </div>
+</form>
 </html>
