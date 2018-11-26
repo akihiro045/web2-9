@@ -11,8 +11,14 @@
                $("#toggle").fadeToggle("slow");
             });
         });
+    </script>
+    <script type="text/javascript">
         $(document).ready(function(){
-            $("#id名").charCount();
+            $("#id名").charCount({
+                allowed: 50,
+                warning: 20,
+                counterText: '残り: '
+            });
         });
     </script>    
 </head>
